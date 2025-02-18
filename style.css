@@ -1,0 +1,10 @@
+:root {
+    --scheme-theme: light dark;
+    color-scheme:var(--scheme-theme) ;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
