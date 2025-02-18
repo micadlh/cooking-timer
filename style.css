@@ -10,22 +10,21 @@ body {
     padding: 0;
     font-family: 'Pixelify Sans', sans-serif;
     color: rgb(195, 116, 202);
-    display: flex;
-    align-items: center;
-    flex-direction: column;
 }
 .title-home {
+    grid-column: span 2;
     font-size: 2.5rem;
-    margin: 10px;
+    margin: 10px 0 0 0;
+    text-align: center;
 }
 .grid-buttons {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    gap: 10px;
     margin: 0 20px;
 }
 
-button {
+.button-home {
     padding: 30px 40px;
     border: none;
     display: block;
@@ -35,16 +34,71 @@ button {
     font-family: 'Tiny5', sans-serif;
     font-size: 1.5rem;
     cursor: pointer;
-    transition: all 0.3s;
+    transition: ease 0.3s;
     min-width: 200px;
     max-width: 300px;
 }
 
 button img {
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 2rem;
+    height: 2rem;
 }
 
 button:active {
-    transform: scale(0.95);
+    transform: scale(0.90);
+}
+
+.page-showed{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.minute-timer {
+    margin: 0;
+    color: rgb(255, 252, 244);
+    font-family: 'Tiny5', sans-serif;;
+    font-size: 4rem;
+    color: white;
+    text-shadow: 
+        2px 2px 0px black,   
+        -2px -2px 0px black,
+        2px -2px 0px black,  
+        -2px 2px 0px black; 
+}
+
+.go-back {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    border-radius: 90px;
+
+    padding: 0px;
+    background-color: rgb(195, 116, 202);
+    display: flex;
+    border: black 3px solid;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.timer-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+}
+
+#resetButton {
+    grid-column: span 2;
+}
+
+.timer-buttons button{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(195, 116, 202);
+    color: white;
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: ease 0.3s;
 }
