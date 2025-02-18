@@ -11,12 +11,19 @@ body {
     font-family: 'Pixelify Sans', sans-serif;
     color: rgb(195, 116, 202);
 }
+
 .title-home {
     grid-column: span 2;
     font-size: 2.5rem;
     margin: 10px 0 0 0;
     text-align: center;
+    animation: moveUpDown 2s infinite ease-in-out;
 }
+
+.title-home:hover {
+    animation-play-state: paused;
+}
+
 .grid-buttons {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -45,7 +52,7 @@ button img {
 }
 
 button:active {
-    transform: scale(0.90);
+    transform: scale(0.95);
 }
 
 .page-showed{
@@ -102,3 +109,15 @@ button:active {
     cursor: pointer;
     transition: ease 0.3s;
 }
+
+@keyframes moveUpDown {
+    0% {
+      transform: translateY(-10px);
+    }
+    50% {
+      transform: translateY(10px); 
+    }
+    100% {
+      transform: translateY(-10px); 
+    }
+  }
