@@ -4,13 +4,39 @@
     <meta charset="UTF-8" />
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self'"
+      content="default-src 'self'; script-src 'self'; font-src 'self' https://fonts.gstatic.com; style-src 'self' https://fonts.googleapis.com;"
     />
     <link rel="stylesheet" href="style.css" />
     <title>My Pixel App</title>
   </head>
   <body>
-    <h1>My Pixel App</h1>
+    <h1 class="title-home">¿Qué cocino hoy?</h1>
+    <div class="grid-buttons">
+      <div>
+        Huevo Blando
+        <button class="button1">
+          <img src="./src/images/eggs_softboiled.png" alt="" /><br />6 minutos
+        </button>
+      </div>
+      <div>
+        Huevo Duro
+        <button class="button2">
+          <img src="./src/images/eggs_white.png" alt="" /><br />10 minutos
+        </button>
+      </div>
+      <div>
+        Salchicha
+        <button class="button4">
+          <img src="./src/images/Hot dog.png" alt="" /><br />12 minutos
+        </button>
+      </div>
+      <div>
+        Arroz
+        <button class="button3">
+          <img src="./src/images/Bowl of rice.png" alt="" /><br />15 minutos
+        </button>
+      </div>
+    </div>
     <script src="renderer.js"></script>
   </body>
 </html>

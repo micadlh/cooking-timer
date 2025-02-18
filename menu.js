@@ -4,11 +4,36 @@ const setMainMenu = (mainWindow) => {
         {
             label: 'Menu',
             submenu: [
-                { role: 'reload' },
-                { role: 'toggleDevTools' },
+                {
+                    label: '💡 Claro',
+                    click() {
+                        mainWindow.webContents.send('update-theme', 'light');
+                    }
+                },
+                {
+                    label: '🌙 Obscuro',
+                    click() {
+                        mainWindow.webContents.send('update-theme', 'dark');
+                    }
+                },
                 { type: 'separator' },
                 {
-                    label: 'Salir de la app',
+                    label: '🔃 Recargar',
+                    accelerator: 'Ctrl+R',
+                    click() {
+                        mainWindow.reload();
+                    }
+                },
+                {
+                    label: '🔎 Inspector',
+                    accelerator: 'Ctrl+Shift+I',
+                    click() {
+                        mainWindow.webContents.toggleDevTools();
+                    },
+                },
+                { type: 'separator' },
+                {
+                    label: '❌ Salir',
                     accelerator: 'Ctrl+Q',
                     click() {
                         app.quit();
@@ -16,25 +41,6 @@ const setMainMenu = (mainWindow) => {
                 }
             ]
         },
-        {
-            label: 'Opciones',
-            submenu: [
-                {
-                    label: '💡Claro',
-                    click() {
-                        mainWindow.webContents.send('update-theme', 'light');
-                    }
-                },
-                {
-                    label: '🌙Obscuro',
-                    click() {
-                        mainWindow.webContents.send('update-theme', 'dark');
-                    }
-                }
-            ]
-        }
-
-
     ];
 
     const menu = Menu.buildFromTemplate(template)
