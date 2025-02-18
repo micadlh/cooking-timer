@@ -23,3 +23,7 @@ const createWindow = () => {
 app.whenReady().then(() => {
     createWindow()
 })
+//esto lo dejo por si alguien con macOS quiere probarlo
+app.on('window-all-closed', () => {
+    if (process.platform !== 'darwin') app.quit();
+});

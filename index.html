@@ -4,39 +4,61 @@
     <meta charset="UTF-8" />
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self'; font-src 'self' https://fonts.gstatic.com; style-src 'self' https://fonts.googleapis.com;"
+      content="default-src 'self'; script-src 'self' 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;"
     />
     <link rel="stylesheet" href="style.css" />
     <title>My Pixel App</title>
   </head>
+
   <body>
-    <h1 class="title-home">¿Qué cocino hoy?</h1>
-    <div class="grid-buttons">
+    <div id="home" class="grid-buttons screen">
+      <h1 class="title-home">¿Qué cocino hoy?</h1>
       <div>
         Huevo Blando
-        <button class="button1">
-          <img src="./src/images/eggs_softboiled.png" alt="" /><br />6 minutos
+        <button class="button-home" onclick="showPage('huevo-blando')">
+          <img src="./src/images/eggs_softboiled.png" alt="huevo-blando" />
+          <br />6 minutos
         </button>
       </div>
       <div>
         Huevo Duro
-        <button class="button2">
-          <img src="./src/images/eggs_white.png" alt="" /><br />10 minutos
+        <button class="button-home">
+          <img src="./src/images/eggs_white.png" alt="huevo-duro" />
+          <br />10 minutos
         </button>
       </div>
       <div>
         Salchicha
-        <button class="button4">
-          <img src="./src/images/Hot dog.png" alt="" /><br />12 minutos
+        <button class="button-home">
+          <img src="./src/images/Hot dog.png" alt="salchicha" />
+          <br />12 minutos
         </button>
       </div>
       <div>
         Arroz
-        <button class="button3">
-          <img src="./src/images/Bowl of rice.png" alt="" /><br />15 minutos
+        <button class="button-home">
+          <img src="./src/images/Bowl of rice.png" alt="arroz" />
+          <br />15 minutos
         </button>
       </div>
     </div>
+
+    <div id="huevo-blando" class="screen" style="display: none">
+      <div class="page-showed">
+        <button onclick="showPage('home')" class="go-back">
+          <img src="./src/icons/button-back.png" alt="go-back" />
+        </button>
+        <h1>HUEVO BLANDO</h1>
+        <img src="./src/images/eggs_softboiled.png" alt="huevo-blando" />
+        <p id="timer" class="minute-timer">06:00</p>
+        <div class="timer-buttons">
+          <button id="startButton">Iniciar</button>
+          <button id="stopButton" disabled>Detener</button>
+          <button id="resetButton">Resetear</button>
+        </div>
+      </div>
+    </div>
+
     <script src="renderer.js"></script>
   </body>
 </html>
