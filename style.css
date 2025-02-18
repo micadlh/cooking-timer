@@ -2,6 +2,9 @@
 
 :root {
     --scheme-theme: light dark;
+    --rosita: rgb(195, 116, 202);
+    --blanco: rgb(255, 252, 244);
+    --negro-fondo: rgb(31,31,31);
     color-scheme:var(--scheme-theme) ;
 }
 
@@ -9,7 +12,19 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Pixelify Sans', sans-serif;
-    color: rgb(195, 116, 202);
+    color: var(--rosita)
+}
+
+.close-button{
+    background-color: transparent;
+    border: none;
+    top:5px;
+    right:5px;
+    position: absolute;
+    cursor: pointer;
+    color: var(--rosita);
+    font-size: 1.5rem;
+    font-family: 'Pixelify Sans', sans-serif;
 }
 
 .title-home {
@@ -36,8 +51,8 @@ body {
     border: none;
     display: block;
     border-radius: 5px;
-    background-color: rgb(195, 116, 202);
-    color: white;
+    background-color: var(--rosita);
+    color: var(--blanco);
     font-family: 'Tiny5', sans-serif;
     font-size: 1.5rem;
     cursor: pointer;
@@ -63,29 +78,28 @@ button:active {
 
 .minute-timer {
     margin: 0;
-    color: rgb(255, 252, 244);
+    color: var(--blanco);
     font-family: 'Tiny5', sans-serif;;
     font-size: 4rem;
-    color: white;
     text-shadow: 
-        2px 2px 0px black,   
-        -2px -2px 0px black,
-        2px -2px 0px black,  
-        -2px 2px 0px black; 
+        2px 2px 0px var(--negro-fondo),   
+        -2px -2px 0px var(--negro-fondo),
+        2px -2px 0px var(--negro-fondo),  
+        -2px 2px 0px var(--negro-fondo); 
 }
 
 .go-back {
     position: absolute;
-    top: 10px;
-    left: 10px;
-    border-radius: 90px;
-
-    padding: 0px;
-    background-color: rgb(195, 116, 202);
-    display: flex;
-    border: black 3px solid;
+    top: 5px;
+    left: 5px;
+    background-color: transparent;
     transition: all 0.3s;
+    border: none;
     cursor: pointer;
+    color: var(--rosita);
+    font-size: 1.3rem;
+    letter-spacing: -1px;
+    font-family: 'Pixelify Sans', sans-serif;
 }
 
 .timer-buttons {
@@ -102,8 +116,8 @@ button:active {
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    background-color: rgb(195, 116, 202);
-    color: white;
+    background-color: var(--rosita);
+    color: var(--blanco);
     font-family: 'Pixelify Sans', sans-serif;
     font-size: 1rem;
     cursor: pointer;

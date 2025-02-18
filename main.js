@@ -1,4 +1,4 @@
-const { app, BrowserWindow } = require('electron')
+const { app, BrowserWindow, ipcMain } = require('electron')
 const { setMainMenu } = require('./menu.js');
 const { createContextMenu } = require('./contextMenu.js');
 const path = require('path');
@@ -20,6 +20,7 @@ const createWindow = () => {
     mainWindow.loadFile('index.html');
 
     setMainMenu(mainWindow);
+
     const contextMenu = createContextMenu(mainWindow);
 
     // Evento para mostrar el menú contextual al hacer clic derecho
@@ -27,8 +28,12 @@ const createWindow = () => {
         contextMenu.popup({ window: mainWindow, x: params.x, y: params.y });
     });
 
-}
+    ipcMain.on('close-app', () => {
+        app.quit(); // Cerrar la aplicación 
+    });
 
+
+}
 
 app.whenReady().then(() => {
     createWindow()
