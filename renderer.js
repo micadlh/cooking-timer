@@ -34,12 +34,29 @@ const startButton = document.getElementById('startButton');
 const stopButton = document.getElementById('stopButton');
 const resetButton = document.getElementById('resetButton');
 
+///funcion para alerta del timer////////
+function showCustomAlert() {
+    // Mostrar el overlay y el custom alert
+    document.getElementById("overlay").style.display = "block";
+    document.getElementById("customAlert").style.display = "flex";
+
+    // Reproducir sonido de alarma
+    var audio = new Audio("C:/Users/PC/Documents/pixel-app/src/media/8-bit-beeping-sound.mp3");
+    audio.play();
+
+    // Ocultar la alerta después de 3 segundos
+    setTimeout(function () {
+        document.getElementById("customAlert").style.display = "none";
+        document.getElementById("overlay").style.display = "none";
+    }, 6000);
+}
+
 // Función para actualizar el temporizador
 function updateTimer() {
     if (seconds === 0 && minutes === 0) {
         clearInterval(timerInterval);
         isRunning = false;
-        alert("¡Tiempo terminado!");
+        showCustomAlert();
         startButton.disabled = false;
         stopButton.disabled = true;
         return;

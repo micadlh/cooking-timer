@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self' 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;"
+      content="default-src 'self'; media-src 'self' https://www.soundjay.com; script-src 'self' 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;"
     />
     <link rel="stylesheet" href="style.css" />
     <title>My Pixel App</title>
@@ -47,6 +47,13 @@
           <br />15 minutos
         </button>
       </div>
+    </div>
+
+    <div id="overlay" class="overlay"></div>
+    <div id="customAlert" class="customAlert">
+      <img src="./src/media/alarm-clock.gif" alt="alarm" />
+      <span class="title-alarm">¡Tiempo terminado! </span><br />
+      La comida está lista.
     </div>
 
     <div id="huevo-blando" class="screen" style="display: none">
