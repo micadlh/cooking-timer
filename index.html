@@ -11,6 +11,12 @@
   </head>
 
   <body>
+    <header>
+      <div class="title-bar">
+        <button id="minimizeButton">_</button>
+        <button id="closeAppButton" class="close-button">X</button>
+      </div>
+    </header>
     <div id="home" class="grid-buttons screen">
       <h1 class="title-home">¿Qué cocino hoy?</h1>
       <div>
@@ -45,9 +51,7 @@
 
     <div id="huevo-blando" class="screen" style="display: none">
       <div class="page-showed">
-        <button onclick="showPage('home')" class="go-back">
-          <img src="./src/icons/button-back.png" alt="go-back" />
-        </button>
+        <button onclick="showPage('home')" class="go-back"><--</button>
         <h1>HUEVO BLANDO</h1>
         <img src="./src/images/eggs_softboiled.png" alt="huevo-blando" />
         <p id="timer" class="minute-timer">06:00</p>

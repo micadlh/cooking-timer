@@ -1,3 +1,4 @@
+///ESTE MENU SE MOSTRARÁ CUANDO LA VENTANA TENGA FRAME:TRUE. SI NO TIENE FRAME, NO SE MOSTRARÁ.
 const { app, Menu } = require('electron');
 const setMainMenu = (mainWindow) => {
     const template = [
