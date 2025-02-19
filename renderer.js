@@ -91,4 +91,9 @@ startButton.addEventListener('click', startTimer);
 stopButton.addEventListener('click', stopTimer);
 resetButton.addEventListener('click', resetTimer);
 
+///////////para minimizar la ventana////////////////////////
+const minimizeButton = document.getElementById('minimizeButton');
 
+minimizeButton.addEventListener('click', () => {
+    window.electronAPI.minimize();
+});

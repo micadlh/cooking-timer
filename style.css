@@ -15,12 +15,16 @@ body {
     color: var(--rosita)
 }
 
-.close-button{
+.title-bar {
+    -webkit-app-region: drag;
+    display:flex;
+    justify-content: end;
+}
+
+.title-bar button{
+    -webkit-app-region: no-drag;
     background-color: transparent;
     border: none;
-    top:5px;
-    right:5px;
-    position: absolute;
     cursor: pointer;
     color: var(--rosita);
     font-size: 1.5rem;
@@ -33,10 +37,6 @@ body {
     margin: 20px 0 0 0;
     text-align: center;
     animation: moveUpDown 2s infinite ease-in-out;
-}
-
-.title-home:hover {
-    animation-play-state: paused;
 }
 
 .grid-buttons {
@@ -89,6 +89,7 @@ button:active {
 }
 
 .go-back {
+    -webkit-app-region: no-drag;
     position: absolute;
     top: 5px;
     left: 5px;
@@ -124,7 +125,7 @@ button:active {
     transition: ease 0.3s;
 }
 
-@keyframes moveUpDown {
+/*@keyframes moveUpDown {
     0% {
       transform: translateY(-10px);
     }
@@ -134,4 +135,4 @@ button:active {
     100% {
       transform: translateY(-10px); 
     }
-  }
+  }*/

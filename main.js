@@ -32,6 +32,10 @@ const createWindow = () => {
         app.quit(); // Cerrar la aplicación 
     });
 
+    //Evento para minimizar la ventana///
+    ipcMain.on('minimize', () => {
+        mainWindow.minimize();
+    });
 
 }
 
