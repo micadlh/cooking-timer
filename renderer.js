@@ -111,17 +111,21 @@ resetButton.addEventListener('click', resetTimer);
 ////////////renderizado de la página del timer////////////////////////
 document.getElementById('boton-huevo-blando').addEventListener('click', () => {
     document.getElementById('title-food-timer').textContent = 'Huevo Blando';
+    document.getElementById('food-gif').src = './src/media/egg-soft.gif';
     document.getElementById('timer').textContent = '06:00';
 });
 document.getElementById('boton-huevo-duro').addEventListener('click', () => {
     document.getElementById('title-food-timer').textContent = 'Huevo Duro';
-    document.getElementById('timer').textContent = '10:00';
+    document.getElementById('food-gif').src =
+        document.getElementById('timer').textContent = '10:00';
 });
 document.getElementById('boton-fideos').addEventListener('click', () => {
     document.getElementById('title-food-timer').textContent = 'Fideos';
+    document.getElementById('food-gif').src = './src/media/noodless.gif';
     document.getElementById('timer').textContent = '12:00';
 });
 document.getElementById('boton-arroz').addEventListener('click', () => {
     document.getElementById('title-food-timer').textContent = 'Arroz';
-    document.getElementById('timer').textContent = '15:00';
+    document.getElementById('food-gif').src =
+        document.getElementById('timer').textContent = '15:00';
 });
