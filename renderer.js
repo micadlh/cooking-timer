@@ -108,4 +108,20 @@ startButton.addEventListener('click', startTimer);
 stopButton.addEventListener('click', stopTimer);
 resetButton.addEventListener('click', resetTimer);
 
-
+////////////renderizado de la página del timer////////////////////////
+document.getElementById('boton-huevo-blando').addEventListener('click', () => {
+    document.getElementById('title-food-timer').textContent = 'Huevo Blando';
+    document.getElementById('timer').textContent = '06:00';
+});
+document.getElementById('boton-huevo-duro').addEventListener('click', () => {
+    document.getElementById('title-food-timer').textContent = 'Huevo Duro';
+    document.getElementById('timer').textContent = '10:00';
+});
+document.getElementById('boton-fideos').addEventListener('click', () => {
+    document.getElementById('title-food-timer').textContent = 'Fideos';
+    document.getElementById('timer').textContent = '12:00';
+});
+document.getElementById('boton-arroz').addEventListener('click', () => {
+    document.getElementById('title-food-timer').textContent = 'Arroz';
+    document.getElementById('timer').textContent = '15:00';
+});

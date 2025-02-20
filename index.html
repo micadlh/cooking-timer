@@ -23,8 +23,9 @@
       <div>
         Huevo Blando
         <button
+          id="boton-huevo-blando"
           class="button-home"
-          onclick="showPage('huevo-blando'); setMinutes(1)"
+          onclick="showPage('cooking-timer'); setMinutes(6)"
         >
           <img src="./src/images/egg-soft.png" alt="huevo-blando" />
           <br />6 minutos
@@ -32,21 +33,33 @@
       </div>
       <div>
         Huevo Duro
-        <button class="button-home">
+        <button
+          id="boton-huevo-duro"
+          class="button-home"
+          onclick="showPage('cooking-timer'); setMinutes(10)"
+        >
           <img src="./src/images/egg-soft.png" alt="huevo-duro" />
           <br />10 minutos
         </button>
       </div>
       <div>
         Fideos
-        <button class="button-home">
+        <button
+          id="boton-fideos"
+          class="button-home"
+          onclick="showPage('cooking-timer'); setMinutes(12)"
+        >
           <img src="./src/images/noodless.png" alt="salchicha" />
           <br />12 minutos
         </button>
       </div>
       <div>
         Arroz
-        <button class="button-home">
+        <button
+          id="boton-arroz"
+          class="button-home"
+          onclick="showPage('cooking-timer'); setMinutes(15)"
+        >
           <img src="./src/images/noodless.png" alt="arroz" />
           <br />15 minutos
         </button>
@@ -60,12 +73,12 @@
       La comida está lista.
     </div>
 
-    <div id="huevo-blando" class="screen" style="display: none">
+    <div id="cooking-timer" class="screen" style="display: none">
       <div class="page-showed">
         <button onclick="showPage('home')" class="go-back"><--</button>
-        <h1>HUEVO BLANDO</h1>
+        <h1 id="title-food-timer"></h1>
         <img src="./src/media/egg-soft.gif" alt="huevo-blando" />
-        <p id="timer" class="minute-timer">01:00</p>
+        <p id="timer" class="minute-timer"></p>
         <div class="timer-buttons">
           <button id="startButton">Iniciar</button>
           <button id="stopButton" disabled>Pausar</button>
