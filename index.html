@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self' 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;"
+      content="default-src 'self'; media-src 'self' https://www.soundjay.com; script-src 'self' 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;"
     />
     <link rel="stylesheet" href="style.css" />
     <title>My Pixel App</title>
@@ -19,45 +19,56 @@
     </header>
     <div id="home" class="grid-buttons screen">
       <h1 class="title-home">¿Qué cocino hoy?</h1>
+
       <div>
         Huevo Blando
-        <button class="button-home" onclick="showPage('huevo-blando')">
-          <img src="./src/images/eggs_softboiled.png" alt="huevo-blando" />
+        <button
+          class="button-home"
+          onclick="showPage('huevo-blando'); setMinutes(1)"
+        >
+          <img src="./src/images/egg-soft.png" alt="huevo-blando" />
           <br />6 minutos
         </button>
       </div>
       <div>
         Huevo Duro
         <button class="button-home">
-          <img src="./src/images/eggs_white.png" alt="huevo-duro" />
+          <img src="./src/images/egg-soft.png" alt="huevo-duro" />
           <br />10 minutos
         </button>
       </div>
       <div>
-        Salchicha
+        Fideos
         <button class="button-home">
-          <img src="./src/images/Hot dog.png" alt="salchicha" />
+          <img src="./src/images/noodless.png" alt="salchicha" />
           <br />12 minutos
         </button>
       </div>
       <div>
         Arroz
         <button class="button-home">
-          <img src="./src/images/Bowl of rice.png" alt="arroz" />
+          <img src="./src/images/noodless.png" alt="arroz" />
           <br />15 minutos
         </button>
       </div>
+    </div>
+
+    <div id="overlay" class="overlay"></div>
+    <div id="customAlert" class="customAlert">
+      <img src="./src/media/alarm-clock.gif" alt="alarm" />
+      <span class="title-alarm">¡Tiempo terminado! </span><br />
+      La comida está lista.
     </div>
 
     <div id="huevo-blando" class="screen" style="display: none">
       <div class="page-showed">
         <button onclick="showPage('home')" class="go-back"><--</button>
         <h1>HUEVO BLANDO</h1>
-        <img src="./src/images/eggs_softboiled.png" alt="huevo-blando" />
-        <p id="timer" class="minute-timer">06:00</p>
+        <img src="./src/media/egg-soft.gif" alt="huevo-blando" />
+        <p id="timer" class="minute-timer">01:00</p>
         <div class="timer-buttons">
           <button id="startButton">Iniciar</button>
-          <button id="stopButton" disabled>Detener</button>
+          <button id="stopButton" disabled>Pausar</button>
           <button id="resetButton">Resetear</button>
         </div>
       </div>

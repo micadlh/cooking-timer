@@ -1,10 +1,8 @@
 const { Menu, MenuItem, app } = require('electron');
 
 const createContextMenu = (mainWindow) => {
-    // Crear el menú contextual
     const contextMenu = new Menu();
 
-    // Opción para cambiar el tema a claro
     contextMenu.append(new MenuItem({
         label: '💡 Claro',
         click() {
@@ -12,7 +10,6 @@ const createContextMenu = (mainWindow) => {
         }
     }));
 
-    // Opción para cambiar el tema a oscuro
     contextMenu.append(new MenuItem({
         label: '🌙 Obscuro',
         click() {
@@ -20,10 +17,8 @@ const createContextMenu = (mainWindow) => {
         }
     }));
 
-    // Separador
     contextMenu.append(new MenuItem({ type: 'separator' }));
 
-    // Opción de recargar
     contextMenu.append(new MenuItem({
         label: '🔃 Recargar',
         accelerator: 'Ctrl+R',
@@ -32,7 +27,6 @@ const createContextMenu = (mainWindow) => {
         }
     }));
 
-    // Opción para abrir las herramientas de desarrollo
     contextMenu.append(new MenuItem({
         label: '🔎 Inspector',
         accelerator: 'Ctrl+Shift+I',
@@ -41,10 +35,8 @@ const createContextMenu = (mainWindow) => {
         }
     }));
 
-    // Separador
     contextMenu.append(new MenuItem({ type: 'separator' }));
 
-    // Opción de salir
     contextMenu.append(new MenuItem({
         label: '❌ Salir',
         accelerator: 'Ctrl+Q',
