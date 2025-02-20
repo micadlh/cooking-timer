@@ -44,9 +44,11 @@ let timerInterval;
 let isRunning = false;
 let seconds = 0;
 let minutes;
+let minInit;
 
 function setMinutes(min) {
     minutes = min;
+    minInit = min;
 }
 
 const timerDisplay = document.getElementById('timer');
@@ -94,7 +96,7 @@ function stopTimer() {
 function resetTimer() {
     clearInterval(timerInterval);
     isRunning = false;
-    minutes = 6;
+    minutes = minInit;
     seconds = 0;
     const formattedTime = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
     timerDisplay.textContent = formattedTime;
