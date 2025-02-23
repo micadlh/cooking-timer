@@ -55,6 +55,8 @@ const timerDisplay = document.getElementById('timer');
 const startButton = document.getElementById('startButton');
 const stopButton = document.getElementById('stopButton');
 const resetButton = document.getElementById('resetButton');
+const foodGif = document.getElementById('food-gif');
+const titleFoddTimer = document.getElementById('title-food-timer');
 
 function updateTimer() {
     if (seconds === 0 && minutes === 0) {
@@ -83,6 +85,7 @@ function startTimer() {
         timerInterval = setInterval(updateTimer, 1000);
         startButton.disabled = true;
         stopButton.disabled = false;
+        foodGif.src = foodGif.src.replace('.png', '.gif');
     }
 }
 
@@ -91,6 +94,7 @@ function stopTimer() {
     isRunning = false;
     startButton.disabled = false;
     stopButton.disabled = true;
+    foodGif.src = foodGif.src.replace('.gif', '.png');
 }
 
 function resetTimer() {
@@ -102,6 +106,7 @@ function resetTimer() {
     timerDisplay.textContent = formattedTime;
     startButton.disabled = false;
     stopButton.disabled = true;
+    foodGif.src = foodGif.src.replace('.gif', '.png');
 }
 
 startButton.addEventListener('click', startTimer);
@@ -110,22 +115,22 @@ resetButton.addEventListener('click', resetTimer);
 
 ////////////renderizado de la página del timer////////////////////////
 document.getElementById('boton-huevo-blando').addEventListener('click', () => {
-    document.getElementById('title-food-timer').textContent = 'Huevo Blando';
-    document.getElementById('timer').textContent = '06:00';
-    document.getElementById('food-gif').src = './src/media/eggsoftboiled.gif';
+    titleFoddTimer.textContent = 'Huevo Blando';
+    foodGif.src = './src/images/eggsoftboiled.png';
+    timerDisplay.textContent = '06:00';
 });
 document.getElementById('boton-huevo-duro').addEventListener('click', () => {
-    document.getElementById('title-food-timer').textContent = 'Huevo Duro';
-    document.getElementById('food-gif').src = './src/media/eggboiled.gif';
-    document.getElementById('timer').textContent = '10:00';
+    titleFoddTimer.textContent = 'Huevo Duro';
+    foodGif.src = './src/images/eggboiled.png';
+    timerDisplay.textContent = '10:00';
 });
 document.getElementById('boton-fideos').addEventListener('click', () => {
-    document.getElementById('title-food-timer').textContent = 'Fideos';
-    document.getElementById('food-gif').src = './src/media/noodlessauce.gif';
-    document.getElementById('timer').textContent = '12:00';
+    titleFoddTimer.textContent = 'Fideos';
+    foodGif.src = './src/images/noodlessauce.png';
+    timerDisplay.textContent = '12:00';
 });
 document.getElementById('boton-arroz').addEventListener('click', () => {
-    document.getElementById('title-food-timer').textContent = 'Arroz';
-    document.getElementById('food-gif').src = './src/media/rice-bowl.gif';
-    document.getElementById('timer').textContent = '15:00';
+    titleFoddTimer.textContent = 'Arroz';
+    foodGif.src = './src/images/rice-bowl.png';
+    timerDisplay.textContent = '15:00';
 });

@@ -39,6 +39,18 @@ body {
     animation: moveUpDown 2s infinite ease-in-out;
 }
 
+@keyframes moveUpDown {
+    0% {
+      transform: translateY(-10px);
+    }
+    50% {
+      transform: translateY(10px); 
+    }
+    100% {
+      transform: translateY(-10px); 
+    }
+  }
+
 .grid-buttons {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -47,7 +59,7 @@ body {
 }
 
 .button-home {
-    padding: 30px 40px;
+    padding: 20px;
     border: none;
     display: block;
     border-radius: 5px;
@@ -62,8 +74,8 @@ body {
 }
 
 button img {
-    width: 5rem;
-    height: 5rem;
+    width: 6rem;
+    height: 6rem;
 }
 
 button:active {
@@ -125,17 +137,22 @@ button:active {
     transition: ease 0.3s;
 }
 
-@keyframes moveUpDown {
-    0% {
-      transform: translateY(-10px);
+#title-food-timer {
+    white-space: nowrap; 
+    overflow: hidden; 
+    display: inline-block;
+    animation: typing 1.5s steps(12);
+  }
+  
+  @keyframes typing {
+    from {
+      clip-path: inset(0 100% 0 0); 
     }
-    50% {
-      transform: translateY(10px); 
-    }
-    100% {
-      transform: translateY(-10px); 
+    to {
+      clip-path: inset(0 0 0 0); 
     }
   }
+  
 
   .customAlert {
     display: none;
