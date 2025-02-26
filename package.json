@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "main.js",
   "scripts": {
+    "build": "electron-builder",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "electron ."
   },
@@ -18,6 +19,7 @@
   "homepage": "https://github.com/micadlh/cooking-timer#readme",
   "description": "My pixel app",
   "devDependencies": {
-    "electron": "^34.1.1"
+    "electron": "^34.2.0",
+    "electron-builder": "^25.1.8"
   }
 }

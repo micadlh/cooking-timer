@@ -1,0 +1,17 @@
+appId: com.mica.cookingtimer
+productName: Cooking Timer
+directories:
+  output: dist
+
+win:
+  target:
+    - nsis
+  icon: src/assets/clock-timer.ico
+
+mac:
+  target: dmg
+  icon: src/assets/clock-timer.icns
+
+linux:
+  target: AppImage
+  icon: src/assets/clock-timer.png

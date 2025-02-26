@@ -1,0 +1,17 @@
+directories:
+  output: dist
+  buildResources: build
+appId: com.mica.cookingtimer
+productName: Cooking Timer
+win:
+  target:
+    - nsis
+  icon: src/assets/clock-timer.ico
+mac:
+  target: dmg
+  icon: src/assets/clock-timer.icns
+linux:
+  target: AppImage
+  icon: src/assets/clock-timer.png
+files: []
+electronVersion: 34.2.0
